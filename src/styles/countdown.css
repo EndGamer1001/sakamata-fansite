@@ -1,0 +1,229 @@
+.countdown-section {
+    background: rgba(27, 0, 0, 0.8);  /* 改為深紅色調背景 */
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.countdown-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.countdown-container h2 {
+    color: #8a7373;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#countdown {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.time-block {
+    background: rgba(87, 19, 19, 0.5);  /* 改為深紅色調背景 */
+    padding: 1.5rem;
+    border-radius: 10px;
+    min-width: 100px;
+}
+
+.time-block span {
+    display: block;
+    color: #a02222;
+}
+
+.time-block span:first-child {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.time-block .label {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.stream-thumbnail {
+    margin-top: 2rem;
+    position: relative;
+    width: 80%;  /* 縮小到原本的0.75倍 */
+    max-width: 600px;  /* 調整最大寬度 */
+    margin: 2rem auto;  /* 上下2rem間距，左右auto實現置中 */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(139, 0, 0, 0.2);  /* 改為紅色陰影 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;  /* 平滑過渡效果 */
+}
+
+.stream-link {
+    display: block;
+    position: relative;
+    background: #4a1010;  /* 黑色背景 */
+}
+
+.stream-thumbnail img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: block;
+}
+
+/* 懸停效果 */
+.stream-thumbnail:hover {
+    transform: translateY(-5px);  /* 向上浮動 */
+    box-shadow: 0 6px 25px rgba(139, 0, 0, 0.3);  /* 改為紅色陰影 */
+}
+
+.stream-thumbnail:hover img {
+    transform: scale(1.05);  /* 圖片輕微放大 */
+    opacity: 0.9;  /* 略微降低不透明度 */
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 0, 0, 0.4);  /* 改為深紅色調背景 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.stream-link:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-icon {
+    color: rgb(147, 17, 17);
+    font-size: 48px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.stream-link:hover .play-icon {
+    transform: scale(1.2);  /* 播放圖標放大效果 */
+}
+
+.stream-thumbnail::before,
+.stream-thumbnail::after {
+   content: '';
+   position: absolute;
+   top: 5px;
+   left: 5px;
+   right: 5px;
+   bottom: 5px;
+   border: 1px solid #4a0000;
+   pointer-events: none;
+   z-index: 1;
+}
+
+.stream-thumbnail::before {
+   top: 10px;
+   left: 10px;
+   right: 10px;
+   bottom: 10px;
+   border: 2px solid #8B0000;
+}
+
+.stream-thumbnail:hover::before,
+.stream-thumbnail:hover::after {
+   border-color: #FF0000;
+}
+
+.countdown-section {
+    background: rgba(27, 0, 0, 0.8);
+    padding: 3rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+ }
+ 
+ .wave-background {
+    position: absolute;
+    top: -50%; /* 調整位置讓波浪更大 */
+    left: 0;
+    width: 200%;
+    height: 250%; /* 增加高度 */
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2880 640'%3E%3Cpath fill='rgba(139,0,0,0.5)' d='M0,320L80,288C160,256,320,192,480,192C640,192,800,256,960,261.3C1120,267,1280,213,1440,208C1600,203,1760,245,1920,261.3C2080,277,2240,267,2400,240C2560,213,2720,171,2800,149.3L2880,128L2880,640L2800,640C2720,640,2560,640,2400,640C2240,640,2080,640,1920,640C1760,640,1600,640,1440,640C1280,640,1120,640,960,640C800,640,640,640,480,640C320,640,160,640,80,640L0,640Z'%3E%3C/path%3E%3C/svg%3E");
+    background-size: 100% 100%; /* 調整背景大小 */
+    animation: waveMove 30s linear infinite;
+    z-index: -1;
+    opacity: 0.8; /* 提高不透明度 */
+ }
+
+ @keyframes waveMove {
+    0% {
+        transform: translateX(0) translateZ(0);
+    }
+    100% {
+        transform: translateX(-50%) translateZ(0);
+    }
+ }
+ 
+ .wave-background,
+ .wave-background::before, 
+ .wave-background::after {
+    backface-visibility: hidden;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+    will-change: transform;
+ }
+
+ .site-footer {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 2px solid #8B0000;
+}
+
+.disclaimer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.disclaimer-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.disclaimer-content h3 {
+    color: #FF0000;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.disclaimer-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.disclaimer-content .copyright {
+    color: #888888;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.disclaimer-content .emphasis {
+    color: #FF6666;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 1.5rem 0;
+    }
+    
+    .disclaimer-container {
+        padding: 0 1rem;
+    }
+}

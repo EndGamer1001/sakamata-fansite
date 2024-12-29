@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>沙花叉ファンサイト</title>
+    
+    <!-- SEO meta tags -->
+    <meta name="description" content="沙花叉クロヱの非公式ファンサイト。プロフィール、楽曲情報、活動の歴史など、沙花叉クロヱに関する情報をご紹介します。">
+    <meta name="keywords" content="沙花叉クロヱ, ホロライブ, VTuber, ファンサイト">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="沙花叉クロヱ ファンサイト">
+    <meta property="og:description" content="沙花叉クロヱの非公式ファンサイト。プロフィール、楽曲情報、活動の歴史など">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="沙花叉クロヱ ファンサイト">
+    <meta name="twitter:description" content="沙花叉クロヱの非公式ファンサイト。プロフィール、楽曲情報、活動の歴史など">
+
+    <!-- 其他原有的標籤... -->
+
+    <!-- GSAP 插件（需要按順序載入） -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/TextPlugin.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- 自定義樣式 -->
+    <link rel="stylesheet" href="src/styles/main.css">
+    <link rel="icon" type="image/png" href="src/assets/favicon.gif">
+    <link rel="stylesheet" href="src/styles/intro-animation.css">
+    <link rel="stylesheet" href="src/styles/navigation.css">
+    <link rel="stylesheet" href="src/styles/profile.css">
+    <link rel="stylesheet" href="src/styles/countdown.css">
+    <link rel="stylesheet" href="src/styles/songs.css">
+    <link rel="stylesheet" href="src/styles/gothic-styles.css">
+    <link rel="stylesheet" href="src/styles/timeline.css">
+</head>
+<body>
+
+    <div class="global-bubble-container"></div>
+    <div id="intro-animation" class="intro-container">
+        <div class="intro-text">ばっくばっくばく～ん</div>
+        <div class="bubble-container"></div>
+        
+    </div>
+
+    <nav class="nav-bar">
+        <div class="nav-container">
+            <button class="nav-item" data-page="profile">プロフィール</button>
+            <button class="nav-item" data-page="countdown">卒業までのカウントダウン</button>
+            <button class="nav-item" data-page="songs">楽曲</button>
+            <button class="nav-item" data-page="timeline">活動の歴史</button>
+        </div>
+    </nav>
+
+    <main id="main-content" class="main-content hidden"></main>
+
+    <script src="src/scripts/bubbles.js"></script>
+    <script src="src/scripts/intro.js"></script>
+    <script src="src/scripts/navigation.js"></script>
+    <script src="src/scripts/timeline.js"></script>
+
+    
+</body>
+</html>
+
+<!--                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                        $8$                                                                                     
+                                                                   $WM#**wQ0OZqk$                                                                               
+                                                               $8#*ooaaaoOYYYYYYYQmh$                                                                           
+                                                            O/tJaohaaoakqYjxuzznnXUt]-(m                                                                        
+                                                         M\~:   <w*aap0OpmUUJJJJCU<    :+/$                                                                     
+                                                       8ri       !ka00daadCJJJJJL}       .>x%                                                                   
+                                                      @Z.         -hhaaahq0LCCJCr.         >m@                                                                  
+                                                      &aC[;^'......\ooo**dmZ0LLJ>^^^^"",;>)XJb    $k                                                            
+                                              @qqba $*kb#*kqmZZZZZmqhdwoB8bOQLQ0JUUYYYYUJLQmZ0paamZm&                                                           
+                                              @pQwphmwZb#ooooooooa&#OQLJCqMMhm000OZZO00QQQmadwOQbd0mM                                                           
+                                               oZh#pOqahWoaaaaokm*#k0Uu|rcYz0h*okpwpZOZZZZp#dbqpk#dd$                                                           
+                                               #bMobhmdaWho**a*kd0fvrvu)/|n\<v/xXQmbakkbdqpMkqqqm#Mh@                                                           
+                                               #oWo0wkh*#h*obmpCni,\j+~+~>[({cj--<_}nxXOZob*kbkpp*akW                                                           
+                                              8kphkh*ako*a*Z{_cx]:I<f{[]_>?|)j]\]_++\_1}fo*a*aaodmbqwa&                                                         
+                                            #odZwpZZdb&&a*aU+>rx_)}]}x|\}]+|\{!{cnnf|]xi|q#h#8hOmmZqZZha%                                                       
+                                           $adwOwmmpZZ#&aoaC(!?YJ|qpdqf~>>_]}+rbbqO/rj[<np#a*&b0qpZmmmph8                                                       
+                                            WkwmOmwbmqkWkaoCu?i){;]/\|!,,""","l)11<!][+rca#o*&ppmdqm0mw                                                         
+                                             ZmqZqdmpq*#kapwXJ1?f{_!I;;:,:;,,::,:;i_{(jUL*#ooMaqqmpmqq0                                                         
+                                             mbbqqbpqpWoaaO00uXfjc~",::;ilIli:"""I{OmUmZqkMo*#owbbama                                                           
+                                                  bhhoM*ahQzZc}/\J0|i"^:}}][]"^:_nwJbpmCXOaoaaaao*$                                                             
+                                                    8WMoZkXjQbn{)1Uk*0t?!:,:i]/wMokcczj(jnnhkkkao                                                               
+                                                      hCqZrt0kqX\()nZoquurtxunuqmZJbQ()nu}/Yhkh#                                                                
+                                                     oJZaU\vkkdmYt)xfQb0OCYXJZp0CpdQwCQYuOx\k*q0$                                                               
+                                      $okdpd$        LJkan|Omhwmmc?rjxa#*h*hob0Y0ZX{JCcQpqO]jxCCJQo                                                             
+                                      $hpwZZOwb$     cQap|x/~{/vqU1~nJa*hhk0hbzmQLv}(J)|(jO}{:?0CXUm                                                            
+                                        WhbdwLZmp&J0YzJoZ\f>,,">qC(_Ux+JahbpmXQ[ivXt?C(:":f({!^jmJcXL                                                           
+                                            $ob0COUJzXYmZj(::I;\mc1\f1ndmJQvZCXj{xxv]Uz^"^_(1i^)qCzccJW                                                         
+                                         MabpqkoZCYULUCbdcj;;i?CxYzOwmn]I:I">|zmcUY\tr0;;I(j(llvpJzYXcUQ    Woqwwpk$                                            
+                                         WabqOLZkwUQCJCkz(Yri_xccmQc1;"":;II:",\QOZU(xZI!(J|~~tq0JYYXUcJdqwwmLO00Owdo                                           
+                                            $aqZJZvLQCUq0_l}]xvc0?,"^",,:i+l::,":l|LfrU~~-)__rpZJUUUJUv0OOZqpwpdpdbbo                                           
+                                               #kdccQCJLkv__(YrJj,,,",,:;<_l;::,,:l|Y/Y\!I)bZqCCUCJCUXQqpbkka$                                                  
+                                              p0pqmtYCCJOdc0JCucl!;:,::;I<+lIIIIl;^">jYU?+tdwCJCJ0CzXqqmmZZZmpkW                                                
+                                              a0mpqcfYLCJQko\QQvI)<i>li!!~?i!l<II<!}uxfn+.uJCUQCCuvCwwwQZqpbkhh&                                                
+                                                kppwQxcCLCCb)?ju/u||{^i][{\I"+>l<))\//[_',vUJCJnfXwqpwwqUp                                                      
+                                                 $ahbpUXCCXob\<"`",:^^!1|fjf{}]^' .'   .ixCCcj/c0bbwOZZZLp                                                      
+                                                   $kbkpZQJad*aJj{+><~-|rzUUu(?+<III~?|cnJCzvYOZOZpOQQZp$                                                       
+                                                    BkbbbpQdpq8@@bmf]+[i<ft/f?;!~{\LhhawvzQmqO000OZqpd$                                                         
+                                                   MbppwZmdmqdoBmp*m(~_I+/)!/\<?|cnddOaqqZ0q0Z0QQ000Zqbk                                                        
+                                                  $awm0000Zbpbkq?|xZdpY({(vYL\LZ(pqO\rmbQQdmQOwOOQ000QOqqb                                                      
+                                                 $#dq00Q000ma#bL-]]}/jYwdvXpqOdk0QYvJphZmadQ0QmbbQQQQ0Q0mmqM                                                    
+                                                 kmqqm0000ZkpJC1-??-+/zdMwxLZmpbdb0x]<]>]Lw0QQOdqCLLQQQQ0w0wM                                                   
+                                                k00wwwm00Oqpw(]?]?]|Ymk*##JXJvrJOmZJf-;.,(JmQQqwd0LLLQQQQ0q0ph8                                                 
+                                               bQQZ0mmmwmwOZwmmJCZObMhpbmv(+->;i<1nOaopLvfJqQ0mpZZQLLLQQQ0qm0pq*                                                
+                                              opOOZOOZpppd0Qmmdwqbbwaa*/+<;'!;I>^".">jkafrhbwm0d0Q0L00LQQ0ZpOpmma                                               
+                                             %wdbdOOOOOdamwn(cCJ00Qvxqk+><`l".l!^^.  [Un0wOkbZpm0QLmwd0LLQQbmwp0ma                                              
+                                             pCObbpOZZOwZ[{{_1[]}[}_tOL~>>"<Ii<;^''l(c~`{cC00kbQ0QQwZmLLLQQddOpZZwh                                             
+                                           *wCLQkbkpZOOwdXn<}?_?_<-nYr?~>"<~_-~"^;<jX>"!;?vv/zmLQQ0mqmLLLLQ0hZmpZZwa                                            
+                                         aa*0zXzmdbdpqmpdhmYZwX/[}vY1_?i;;?~~!^:;/v1I-}<"<:<fvZQLLmmwZZLLLQQphQZqwmwo                                           
+                                       *khaoddpOzqpbbbdbqmwpoahdQmQj11)>l)]-:!_/Xcx!?ff/_{l?tmQmOZQwQLO0LQQ0ZadCCZqmq*                                          
+                                      akhhoadbd#kqpppbhkdbZ0mOQmbdmkpZwdQLLCcJdo*qbkoapkapphapmpw0wQCLL00Q0OOqoqLJQqqd#                                         
+                                     kkka*8hdpb*awwpppbobmqppZqpmQ0QOOwwmLmbbd#admadpobmdbdpdZpqwkOCCCLQO0qdmmmpmQJCqpk%                                        
+                                   $kbkh#W#aqwpkobZwppbobpppqdohZdq00q*dbOdpZOabqZdZObmOmmw0Zdwk0p0QCCLL0dmpmOXmOkmCCqb*                                        
+                                  $kbkkW Zbob0kkkkw0mpbohdmZwOkmmpmZqa*dqQkwOOobmZdO0kpmqpdppqqkhZZ0LLLLwZpwmXnqkbdp0Cw*$                                       
+                                  hdbd* 8vhohwdhhdpm0mbbqpbYftfvL00mbdppOOkwZm*pQOpZZbZQZmOJQCQCXQbOQCLm0qdqL\YqbC)OkqQw#                                       
+                                  bqqk$ UC*aabpOmpdqmqbkhW x[>>-})Ywx{)|/xczzQMj|ttfjf(/Zv1{(()[\  kQLmLZbZZcfQOdkL}cbbmma                                      
+                                  bww* 0X#ahahk0QL0wpbdda$  |ilIIl]w\+~+-?[{{/h/{{[]-_+/O[<<!lIi\ UwpmQ0bmZQ0ZQZpbkq(jwkbqk$                                    
+                                  bmq& zXMkhhhaw0LCCQp*ao$  $}!il;:xJ",,:;l!i?0?<~<<>i:Xu",:;lI]$$QOdmpbmm0QQOqZwbddbu1JoMdka                                   
+                                  bwpM jzobkkhakw0QCC0h      c?!>il>m]:IIlll!jk_!!lI;:!Z?:Il!!~j  $OqWhpmOQ0ZqmOwddpdbL}rY$oakko                                
+                                  bwpM jc*bkkhhhbmO0Q0h       n{<>ilj0<ii<?(cq8c]~>!llxQIll!!!)       oqw0ZmwZQwqqppppbq\{XO$ohkkkkh                            
+                                 *ddbM 00&hbkkkkkbmO0Zo       $hQJvvUz/UOqbhbdMpdm0JUvXJx\/fjYb       $bqqww0Qmwqqqppppdbu]f8 8ohbbbbdk#                        
+                                $bpdk$    *kbkkbkkdmOw*        $#bbbbnfmdqwmwZbkpbhbaX}Lodaak#         %bpm00mwwwqqpppdddou}jh  &ahkpwwwqpdk$   q00z}*          
+                               #bdqpa      *dbbbbkkdwqM         $dLCCQQCCCL0ZUp/-?)cQQQ0LQ0Oa           #bwmwwwqqqpqddddk$ C\z     akpmO00ZmwqqpQQwz/Y0$        
+                              bpqpqk$       okbbbbbkdd8          $dQJUUJCLQCXYLll;:!JJYYJCQd$            oqqqqqqqqdpqpba&   @         apwmmZZZZmZmmqMOrj/\[[    
+                           $dpqm0mpa         Wkbdbbbbk$           $bOCJJCY/rJqul!I:]{{JJLQd%             $hqqqqqqqpbpk*                  adqwmmZZ0Q00bQJvx{\Oa  
+                        kpqwmOOmwd             hbddbka              hZCJJYzLOp\l!~\+:{CL0d8               8kpqqqqqpho$                       apwmZOQZpbpd$$dzb  
+                  bdppqwmZ0Omwqk                $kbbba              $d0UYJCQZbJjvXCjxUC0b$                 Mbdppqba&                             $ZZpmJCQmwOQh  
+                 $pwmmmZZwwqk                     Whko             $qZZCYYJ0wbbq0JCJUYQwk                   *bbkaW                                 $bZOQQmZ$    
+                   *kbdkW                           $M            $CY0mmOOZqda*dmQJYXJOmZqW                 BooM                                                
+                                                                  hnzCZdbbddk8 MkwOQQ0mmOQma                 $                                                  
+                                                                 $qvjCQqkbppa   WhpppddZCJC}{                                                                   
+                                                                 #mJ\c0wbppp*    MbpbkpOJYz"in                                                                  
+                                                                 aOQYfXqdppb&     oppbpZQL(,"[                                                                  
+                                                                 aZQQY}|qpqa      %kpdbL}/+;:_#                                                                 
+                                                                 aZ0QQCJqpbW       #bpw_l{>!l?#                                                                 
+                                                                 amOQQmdpqa         odZ/nC|~+r&                                                                 
+                                                               $aamO00mpqk*W        $hpbqL0CQqao                                                                
+                                                               #kowZO0mqpohk$       #MkppmOmpdhka                                                               
+                                                               #pddpwmqdhodb$       MaabpqqZppodk                                                               
+                                                               apZZmkadmmZp&        Woo*kdqqppmmk8                                                              
+                                                               hpdqwkh00Zmo         $Moo*o*k0QQZOk                                                              
+                                                               MakbkapQOZb$          $#hha*aZQ0OQb                                                              
+                                                               #aaoaabdbk$            $okkkakwpqbW                                                              
+                                                               odbaoooho@              $M*hh***oao                                                              
+                                                              aqmkaaokd#                 *ak*#*hpZb$                                                            
+                                                              hmdahhhkM                   ahooooh0O*                                                            
+                                                              odabaakkk$                   #h*ookdqM                                                            
+                                                              apbbahhaqo                  Woooohk#aa                                                            
+                                                              *bbkhkkkqM                  Maaqadkako                                                            
+                                                              Wakddhbadd                 8ookakdhaaM                                                            
+                                                              BodqpkbwmOk               #aaoaoahhoh#                                                            
+                                                               *bdwpbmQLZh             MbbhppppkaakB                                                            
+                                                               abbdbbkbpqh$           okdbZQQQQObaa$                                                            
+                                                               ppbdbbddpqk$           odkkpmZZZZpao                                                             
+                                                               dwpmqppqwph$           bpkkkbppqwqa*                                                             
+                                                               bwpwqppqwph$           bmpdppppqmp*M                                                             
+                                                               kwqqqpqqwph            kqddpdpdqmd#                                                              
+                                                               hdpppbddpbh            apppppddqwh&                                                              
+                                                                 Ma*WM$               *hkkkkkkbb#                                                               
+                                                                                            $$                                                                  
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                -->>

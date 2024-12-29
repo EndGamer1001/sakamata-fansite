@@ -1,0 +1,274 @@
+.songs-section {
+    padding: 3rem 2rem;
+    background: linear-gradient(180deg, #1a0000 0%, #2B0000 100%);
+    min-height: 100vh;
+}
+
+.songs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.songs-container h2 {
+    color: #FF0000;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.songs-container h2::before,
+.songs-container h2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(to right, transparent, #8B0000, transparent);
+}
+
+.songs-container h2::before {
+    left: 20%;
+}
+
+.songs-container h2::after {
+    right: 20%;
+}
+
+#songs-container,
+#covers-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.song-card {
+   background: rgba(27, 0, 0, 0.8);
+   overflow: hidden;
+   border: 2px solid #8B0000;  /* 加粗的紅色邊框 */
+   transition: transform 0.3s;
+   position: relative;
+}
+
+.song-card::before {
+   content: '';
+   position: absolute;
+   top: 5px;
+   left: 5px;
+   right: 5px;
+   bottom: 5px;
+   border: 1px solid #4a0000;
+   pointer-events: none;
+}
+
+/* 保持懸停效果 */
+.song-card:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 5px 15px rgba(139, 0, 0, 0.3);
+   border: 2px solid #FF0000;  /* 懸停時邊框變亮 */
+}
+
+.song-thumbnail {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+}
+
+.song-thumbnail img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.song-info {
+    padding: 1.5rem;
+}
+
+.song-title {
+    font-size: 1.5rem;
+    color: #FF0000;
+    margin-bottom: 0.5rem;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 1px;
+}
+
+.song-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    font-style: italic;
+}
+
+.song-description {
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+}
+
+.play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.song-card:hover .play-overlay {
+    opacity: 1;
+}
+
+.play-icon {
+    color: #FF0000;
+    font-size: 48px;
+    transition: transform 0.3s ease;
+}
+
+.song-card:hover .play-icon {
+    transform: scale(1.1);
+}
+
+.cover-title {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    /* 已移除 border-top */
+}
+
+@media (max-width: 1024px) {
+    #songs-container,
+    #covers-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .songs-section {
+        padding: 2rem 1rem;
+    }
+    #songs-container,
+    #covers-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.song-thumbnail::before,
+.song-thumbnail::after {
+   content: '';
+   position: absolute;
+   top: 5px;
+   left: 5px;
+   right: 5px;
+   bottom: 5px;
+   border: 1px solid #4a0000;
+   pointer-events: none;
+   z-index: 1;
+}
+
+.song-thumbnail::before {
+   top: 10px;
+   left: 10px;
+   right: 10px;
+   bottom: 10px;
+   border: 2px solid #8B0000;
+}
+
+.song-thumbnail:hover::before,
+.song-thumbnail:hover::after {
+   border-color: #FF0000;
+}
+
+
+.site-footer {
+    background: rgba(0, 0, 0, 0.9);
+    padding: 2rem 0;
+    margin-top: 4rem;
+    border-top: 2px solid #8B0000;
+}
+
+.disclaimer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.disclaimer-content {
+    text-align: center;
+    color: #ffffff;
+}
+
+.disclaimer-content h3 {
+    color: #FF0000;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.disclaimer-content p {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+.disclaimer-content .copyright {
+    color: #888888;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+}
+
+.disclaimer-content .emphasis {
+    color: #FF6666;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .site-footer {
+        padding: 1.5rem 0;
+    }
+    
+    .disclaimer-container {
+        padding: 0 1rem;
+    }
+}
+
+.song-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.song-info a,
+.song-title a,
+.song-date a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 全局移除超連結樣式 */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* 保持標題顏色 */
+.song-title {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+/* 保持日期顏色 */
+.song-date {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}

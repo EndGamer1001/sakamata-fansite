@@ -1,0 +1,77 @@
+.nav-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(27, 0, 0, 0.9);  /* 改為深紅黑色調 */
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(139, 0, 0, 0.3);  /* 改為紅色邊框 */
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    position: relative;
+}
+
+.nav-container::before,
+.nav-container::after {
+    content: '>-<';  /* 添加哥德風格裝飾 */
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8B0000;
+    font-size: 1.2rem;
+}
+
+.nav-container::before {
+    left: 10px;
+}
+
+.nav-container::after {
+    right: 10px;
+}
+
+.nav-item {
+    color: #FF0000;  /* 改為紅色 */
+    background: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;  
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 1rem;
+    position: relative;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #8B0000;
+    transform: scaleX(0);
+    transition: transform 0.3s;
+}
+
+.nav-item:hover {
+    background: rgba(139, 0, 0, 0.1);  /* 改為紅色背景 */
+    color: #FF0000;
+}
+
+.nav-item:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-item.active {
+    background: rgba(139, 0, 0, 0.2);  /* 改為紅色背景 */
+    color: #FF0000;
+    border: 1px solid #8B0000;  /* 添加邊框 */
+}

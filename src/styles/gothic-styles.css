@@ -1,0 +1,165 @@
+:root {
+    --gothic-primary: #8B0000;
+    --gothic-secondary: #2B0000;
+    --gothic-accent: #FF0000;
+    --gothic-dark: #1a0000;
+    --gothic-light: #ffffff;
+    --gothic-border: #4a0000;
+}
+
+/* Gothic Border Pattern */
+.gothic-border {
+    border: 2px solid var(--gothic-border);
+    position: relative;
+}
+
+.gothic-border::before,
+.gothic-border::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 0L20 10L10 20L0 10z' fill='%238B0000'/%3E%3C/svg%3E");
+    background-size: contain;
+}
+
+.gothic-border::before {
+    top: -10px;
+    left: -10px;
+}
+
+.gothic-border::after {
+    bottom: -10px;
+    right: -10px;
+}
+
+/* Gothic Background Pattern */
+.gothic-bg {
+    background-color: var(--gothic-dark);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 0h40v40H0z' fill='%231a0000'/%3E%3Cpath d='M0 0l20 20L40 0M0 40l20-20 20 20' stroke='%234a0000' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 40px 40px;
+}
+
+/* Gothic Text Styles */
+.gothic-text {
+    font-family: 'Cinzel', serif;
+    color: var(--gothic-light);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Gothic Card Styles */
+.gothic-card {
+    background: var(--gothic-secondary);
+    border: 1px solid var(--gothic-primary);
+    box-shadow: 0 0 10px rgba(139, 0, 0, 0.3);
+    position: relative;
+}
+
+.gothic-card::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid var(--gothic-border);
+    pointer-events: none;
+}
+
+/* Gothic Decorative Elements */
+.gothic-divider {
+    position: relative;
+    text-align: center;
+    height: 20px;
+    margin: 20px 0;
+}
+
+.gothic-divider::before,
+.gothic-divider::after {
+    content: '†';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--gothic-primary);
+    font-size: 24px;
+}
+
+.gothic-divider::before {
+    left: 20px;
+}
+
+.gothic-divider::after {
+    right: 20px;
+}
+
+/* Gothic Button Styles */
+.gothic-button {
+    background: var(--gothic-dark);
+    color: var(--gothic-accent);
+    border: 1px solid var(--gothic-primary);
+    padding: 10px 20px;
+    font-family: 'Cinzel', serif;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.gothic-button:hover {
+    background: var(--gothic-primary);
+    color: var(--gothic-light);
+}
+
+.gothic-button::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    border: 1px solid var(--gothic-border);
+    pointer-events: none;
+}
+
+/*??]]]]]?????????????]]]]]]]]]]]]]]]]?)X0LUCCYXzUYXOoqznJmdbdqqQzvnxnnxnvujxurxxf(}{(]!,!{(|\(+I+{}_:,}1!";+l;;;-;,,,!__]}}}tj1}}}}}}[[[[[]]]]]]]?]][[[]|ZwwwmZmmOf}}{{}[[}1jQJYzvzXU
+????????????????]]]]]]]]]]]]]]]????-_tYQUUJYXzYUXzYOJvvCCqbbbbdwQXnjrrrf?l~rXuxrrjj)l:i{\|||||{)1?!!><(1>":>l",<-,,,,~{-]{)t){11111{{{{{{}}}}}[[]]]][][nQZwwmmwL/}}}}{(rUmbbq0LJXunv
+?-???????????]]]??]]]]]]]]][[]]]]]]][uXJXzzzzYXzJYYUUCmpLUdbwwpddqZCzn/~;~(fvCcjrnr)-]\/\|||||//(|((|(|/(l"!-<;,+>,,,,~({-(11)((((((((((((())1{{{{{{}[)nnvUZqqz{[}{1|txcXUC0qppabQqd
+????????????????????]]]][][[[[[[[[[]fccXcvcczCvcCZJJqkkkOYcwkpmZZmwwmZJjffjjjjJQnfxxf//\|||((|((\//()(|?\n)]11<",>:,::l~1]_){{11(())))1{{{}}{{}}{{{{{}/nnuYJUf][1(tjxnnrft\)(rXvvpkq
+]][]]]]]]]]]]]]]]]]]]]????????????-[jvzzcvccULvzmdmb#omQQQujUqbpmZZZZZmwwmOLYvrUmUnjjj/|((||\\\\fvYUYUznjrvc\+-I":;,I>li<?i_}{{]?}{{{}}}[[[[[}[[[[[[[}jnnXYc)[|fjjf/|){[]?}/tf{fmwZw
+{{{11111{{{{}}[]?????]?????-------?)}uzccccvC0zYqbpobUnxY0Qj/rY0wqqwmmZZZmmmmwmZmqwm0OZOOZmqpppqw0CCnf/||}rYJt{>I;::,l_~i~<?-+-[{}}}}[[[]][[][[[]]]][[fnvXu){fr\)1{}}}{(tuUn{?npppka
+rf\){11{{{{{}]?]1|tjj)]]]]]??????-1{/vzcczcvJ0XzCwaZXvuUY0kZf/tfjvUQZwpppqqwwwwwqqpddpqZ0QOZCzcuj/\jzt//};+CXrr|+?::,,I+_>>+}1}]?[}]}{1111{{}}}}}[[]][)jXu)}}{}{{{)/xzXzvj)}}vpwOCOX
+JUYcf){{{{}[]{fcYYvj({}}}}}}}}[[]{|j\uzcXXvvXLYzcuCCXYQmYZQQCf/jr\|\/{1/nXLdqUCLYXt(((/njt/rcXvuunrtuXt1l";}_>-}(/iI,,:l<+>ll+1){}}[?())(()))1)111{{}[]\z(]]]]]{rU0m0u(1{{1{/znnrj(?
+LJzXYv(}{}}}1uYUzj){{{{{{{}[]??-]t\][cccYzvvcJXcQXz0ZmpZUZ1{XYxfjnjt[;,>)cYnt\fzvf{;i><_{frf/fnvnxnnjc|I",,!?+!>_/}!,:,ll>+!l:l-}{{{?)(((()))))1)1{{{{{1/}}[]{\rYOOc)[}{{}}{xrjf/1[[
+(/frvXc(1|jvXQZYt1}{{{{}[]-___+?\{__/YczYzvvvUJzpmCphhwQQU[<]uLXncYJn\fcxxvvuxnXcxn]!iiii>_1uYvvvunjf{],,,,;>!!I]xji,I::i;<+!;,;<?}}-[{|(11)1)111{11{{{{{{}1/xnnf|{][[[[[[]1nxt([]]]
+[}[}/jnu({(xJQOwmLn{??_~<<<++_{/{-?|XXvcXcuvcvQYZdpa*qxxCU-~<~(vv/|nL0f||/ft\())(tju><?{)\xYphbhhdpZQCc[??_>~>l,~cn_:;I,<!l~-!:;]+>-]]?]}[[}}}}}}}}{{{{{}}(fjj/1}[}{{}}[[]](v/}]]]??
+|(}}\jfnn/}-}\fncXXn{__+~_??]()|{](XuvvczcvuvuX0Yda*ZnrcYY++-?[|xXQCncXx\(\tft/|)){c{]vLmko*qCo*kYfQqOY~<~!>~_~!?Yf_::l,<I;!~?!,l}[_]?_-+?]??????----_++<]ff|1}{11111{{}}[[{)]]]]???
+}}(vQwmXf({}[]][}{(fx(|]+-??\(])\tcuncvvvYcvuvuJOJQhccQwXX{}]_<ii?fnj/uQXrt\//\\|(\(\/COXWokwJkpbZ+xLjr>l;lr|{(/XC|~"ii"l+?!I?-"<]1)??+~+?-__-???]]?-+<<+|j){1))))))111{{}}[]]??]{\j
+|(zcxjt){{{{}}}[1\fuYx]++__{x[]1vXcuuczvvXYvvnvnUqvYQwbhCu?<<~_{11)fvvxjr(\ffxnxff/|(xx~!fwQQZLUOv+\))\!;I+u{?c0Oc]Ii}ll]1{>>-<">[]11<~~++++]}}[[{)||(|\/nf\\\|)}[]]][]]]]]]???--?[)
+1(nn|{}{{{{}}}}jXXXc|__---_(v)rUYzvvzYYvuvUJcnncxXCmdkkhLv((rvQbkbpqpm0Jv/[]}{(/ff|{]](+i!_(xxr/(]1}{(<;~]\}\CwJc)!!]+;}{)[__I:,?]_1[)~---_+~-(xYQZZJLZO00OOZZZ0Jvt1]+~~+++________+
+}}[)\xj)}[}}}](LUu\-~+____+}cQZLXczUJYXcvuUJUcxnvxnOoohcrJObkbQwW##azdaoJ|[???]-<>>>il!><~~+_]]][11))-]uYqYXOCcr)!l?{+[{{]<_+",~]l;;+]+_]?}tcQmqpwLYQmmmwwmZ0QQLQQ00QCcf1-++___++~~~
+?{v0mqC[[/\){}}rQUnr\[___?/UOO0JXYLJYXYxvuXcJcXnxvvxQ*0rnUO0c\)fh*bZQmZQQ_ii>i!iil::!!><~+_?]}}{]1|{1\xZpJuvx/f}!>_-<~>l;:;lIl>i::I!>_<+]xCZZmppqLQmqwmZO00OZmwwmmmqppdpZU/?_---_~<>
+]vXUOOj_+?)-_-??/C000Qv{}uXOzLQCCQJYvYuxuncQvcCYuruXcYQUYYCJcf+!}JUJJYzYv~<<>>ii>>>i>>><~+_-?][[_?->+-/vj/(}][~I::,"""",:;l!>il;;!>!i>~|CZ0QYY0ZQmdpqqqmZmmwwmZQCCZqqmLYcccn/{]-_[|f
+}zf|1]????(j}}{{}1/xvXCcrXzr\0LLJJJzunxnzX0YnZqwYvnrnvzJZwJYff{?~<+[{{1{___+~<<><~_~>>>><<~+______??{){}?_>!llI:,,,"",,,,,:::::Ii<++++/QQ/]????[(vmppppqmOQCJJJQmqwmmmZZmZZZZCrtxzXY
+<?+_-?[{rrcX){{{{{}{)/vc|vvr1L0QYUCYcYUQ0mZJZkbadcJLznxxxucYct\))11[[[[[]??_+~<<<<<>!!ii>?~<<~~~~<~?1(||{+<~>l::::I!!lllll!l<_+~<i!_-?Ymmc>;Ill!!!/qppqwOLCJCQOwmQYzzzYJLLQ0QQCLLJzc
+_~<>~-}zOQCX1{{{11{}[]}|-[tLQ0mqqJCZZQLZZZZmpkbpoLx/jxxjfjffnULQv)}{{{{}[]?-_+~<><?-[(\tfXri>><<>[|nXnj/+<<l;Ill;:;;;;!iliii+_+~~<~]1)XmQLJx_l:"""IJbpppqmZmZQYr(}}}}{(txzUzjjjrnvvv
+(1{[{)jOZmZYXvnuj)]---__+1CqqJwkpcUZZLqqpq0ddbaowr?++_?]{|xnxrnXCUur][[]]?-_+~<<><xzvj/\|||>>>>![Xux()t?<ilI>l,^````````^:I>+_-__++?\/\Jdao*COZQLLQqbdppppqJ(_>!l;;;;;;!?jjt/frf([_>
+f|}}}xCYzJ0ZLn)]+++_+++_jdkbqcpddpZ0QOwqqwqbahau__-]??]{(((xnnnuvLopv(]-_+++~<<>>>i?}}{}[->iii~(v]]+-({!>;;i:````````````^^^"I<__+<<?{1)rJqdpM&&&&MabdpppdpwY/[+>!l!l!}uJujnzXj]!,,,
+}fr{(nuncCmwmL\[}[]?--+uo*#akOwbdqdbpdkohbbaoQrr\}-__[)\1(|(junxznUZpZ0r{?-_~<<>!!!!!iiii!ii+|XU/:!1)_>~>,!"`^```````````^"^``":l!l:"^",;l_(uCwbaoo*##ohkbddbbpwZOOZ0LZmzcXcr)-<>_}(
+]]jXvYvYYYQmQzn1]]?--_|Oq*#*#*oaahhkbqpa**kqJ?+]jYUcj{)fr))((rnxnzrjJ0ZUj////|{|x/1{]+<<<_}fYJUn+{/(;;{<"l:`^^```````````^^``^^"^^,lll!llIlI;I>-{/xcYC0mqpppdppqmZ0QCYct[~!lllIl><<<
+~{ct_rmmO0LZZJx(?+_--?Lkkq**oooabqQ([?)XJY1~++]1?)Qdqn{1tvt((nXXnnjfnYuv()1{()}(ZWdo*wJUJYvZda*{_xr_:~]i,i,^^^````````````^`^^":"^^:<+~<<<+__+<i!li<~_?[}1(\ffff/\())1[-i"``^^",,,",
+[UQQ)+(vXcvzQZZY}___+]|Jpko#*oaqpC)]+_]/uX/~~~+()tOhdwX\\zJvxuzYnxfxj\(fj|1[1\(}|Ohbh#*b&ohooah+JUj(l(}I;[:`^```````````^^```^";:"^^"<~<<<<~+__++]}}[?-_~>>ii>~_?]]]?_+~<!llllllII_x
+zO0wu[[[)fnvXQmQx1?+[[??[)/xcXXJv([[___+_{j\?_-}rcXdd0cjxncunuzvcuxf/f(1(|()))\|{(uCZqaaokwkkdh1ZMOr)]j?i|!^``^^````````^"````^;I:^^^:~><<<>!l~/CqdddwLuxf/(]>lIl!i>>>>>>>ii!!!l>\Yz
+nOLU|}{{{{1(\jcYYc|]{][[]?----?]>>>>ii>>i!+({_>i[|r0cfr|rxxxnnCvUnt\fx|((||\||(|(11|fncQQp#hdbkzjLzn/|\t_(?"^``^````````^"^``^";Il,^^^~+><i+)Xpo*#MaQr}<-|xvvx(?iI;Ill!llll!!ii_jn/)
+{vCv1{1{}[]?-__?{/ux[[[]]??-??->>~+++_----_<<+<!;<jftnurxrxxxcJnxxnfxf\\\\\\////\|()1)|fjxZpwUjt)|))}(/)_\\I^````````````^^``^"IIil"""l+_}v0qppbpC\<;;l!lIl<]|xnr\]!I!!!!l;:,,_(]~>>
+)rC\]??-_+~<>iiil:](1[]]???-???????????_~il:""i{tnxxnvvUxfrrnvxjtrznxt/\\\\\\\\/////\({(xXQvCJr|{}}]))\?\\j?"````````````^^`^^"Il~!""";cJrZZOLz/-!!><<<<<>i!I::l]tuf1~ll!ii!li+;"^^"
+0nf~<il:,:;l><<!:+[][]]??-???]-_~<<~+_+~<<<?}[}{11(|||jnvfjrnujfnuvXvj/\\()|\\//\\\\/t\(|CZnLv|j{]?])/)_1jjr<^^^````````^``^^^";!>:""":cc1f{_<ii>>>i!llI;IllI;"..;?|rx(+IIIlllIII:^.
+JX-><>>!lI;:::"'!]][]]?--????!:;li<+++_-]}(|/\({[]][}{/xvxrxvnffrxuzJXj//\[>?(})|\|||)1}]/COv[}1{}{)1]?]?j\rtI^^^^^^^^^^^^^^^^":!l"""::-+I'^:Il!!!!lII;;;;;:,^'.."Ili?/v(l:IllllllII
+_1\?__------_~i<]]]]]?-----]?,!<~++~I<-?[[}}}1/t/){}[}1/nxjrnjftfrtfvYXr\\\}}{;I-)?-[[\YYvLqXnf[--?-+_?[?|/|f{,^^^^^^^^^^^^^^^""l;"""::i|{+!,'......''`^":;;;::::,^'`,![uu?>~~~~~~~~
+++-??][[[[}}[]]?]]]]]?---_?}->____]trvcx|[??]]]{|fjf|(((fxt|\fnnnuftf\/t\{~])]?_+~~-<+zq/1cU1)ZL?___+~>l+{tt\/_"^^^^^^^^^^^^^^""Il""":;;nkpwOYr[]-_+>!!>~+_______~i:I!!l<fJ)<+++++~~
+|[?][[[[]]]]?[??]]]]??--??]{><-)jcUOhkkkdOv)?]?[[}(trf\\\tjjjf//jnf{~!:;(}l_>:I:""":l>}Xt_-?]])/_~+++>><~{\(||\>^"""""""^^^^^^^^,~:"":I;(kbhaaakhbqwZLc/(\\|)]~>>>i:!<++-X8b(>~+++<~
+mQr]++~<i!I:~}??]]]??????]})+|rzU0daao*oaaopu}[[[[}{|t//t\[?((?}){[[1}-_}[+!`^"^""""""l_/|1(((]+<i<~<l;;,?\\((\)l""""""""^^^^^^^^_<^"":;+b**obpdbkahhaawL0qbpq0n|)}1xLwdo8WO{!!!i>>>
+czYX)lllllIi}[[]-]]]????]}1r)}}[})jQo*aaooaokz{]}}{)(|([_[tUwZUu\]-<--__--:`^^"""""""""I+t(-+)?+!,:>~iI:"i}|(((\};"""""""^^^^^^"^~{I;I;:>bMM#oa**okddkkqLCmhaaahppho#&**kU{<<>i!I;::
+~](jzf++++<{}}[[?]]]]]]]}1(t{}}}}{}1ud****oodpv)){->!Il|Qho#*bqk/>-+~?]~?+""""""""""""^";iI:I{]!,"",l!i<+~+_?[11f-;",""""""""""""![?>l?+{d*oWM#*ohbdkbdhhhhdwmQLZkaohdCU\l!i!!!!!!I;
+<~~~_[+<il?1}}[][[[]]][}1)\\1{{{111)1|Udbm0pmJ}<I`...:L&M*o#Mhw*0|[}]-]_?]I:"""""""""""""",:;_-;,,,""""":I!>~+-][)i,""^^""""",,";/ul;~":{v\{c#akkhaokQ0mw0CYJLmk*#qZqbhadx>>~+++~~<i
+<>>i!llI;!{{{}[[}}[[[}}{)|/()))))))))1)Y0CX/-I:,;li<-XphhoMMM*hoM*J([?[_|1!;""""",,,,,,,:,,:I~+I:::,,,,,,""",,I?{nr{?___+]|/{[~(\fv><~,^;I:!]Ykaaa*oabw0QZph#MM#ooadh##*##C?<+__++~>
+llII;::;:+11{{}[{{}}}{{)|t\)))))))1{{[[rn/(|/jf/fnnxxmdhoo****##MMC{{{}[)\->!;,,,::::::::;;Il~+I;::::,,,,,,,:;i)/\0ppbpqUzbbquZM#nx-!^!+>!>I>_Ya#&W#oo##*MMM*kkaoappoM*ooabw\l!!!!lI
+I;;;I!><<{)111{[{{{{{1)|ff(())){}}}}](jxxnuvvuuunxxcQqba****###ohkd){)))1[]]{}!;:::;;;;I;;;l!-<lII;;:::::;;_+;?)\trwmqdpdQmOpppaJcQ~i:,";"`^itwo##M#*8&#oaMM#**oammk*#oaoabdkt`",,:,
+:;!<+__+{())))1111111)|f/()){}[}1|fjtnuuuunxxnnxcQqd*W&W#MWM##akkhpt{))|f(1)-l[~~<lIlll!!ll!<]<!llII;;III><_l':[/njZwpdqmmQJYLwJQdw)__l`l-+>"It*ooMMMMa*#*M#*oaahkao*#o**oahak<.'^`'

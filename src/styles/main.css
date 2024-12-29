@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #1a0000;
+    color: #fff;
+    min-height: 100vh;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cpath d='M0 0h40v40H0z' fill='%231a0000'/%3E%3Cpath d='M0 0l20 20L40 0M0 40l20-20 20 20' stroke='%234a0000' fill='none' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 40px 40px;
+    position: relative; /* 添加這行以確保定位正確 */
+}
+
+.main-content {
+    border: 1px solid #8B0000;
+    min-height: 100vh;
+    padding-top: 60px;
+    position: relative;
+    z-index: 1; /* 添加這行確保內容在泡泡上層 */
+    background-color: rgba(26, 0, 0, 0.7); /* 半透明背景，讓泡泡可見 */
+    
+}
+
+.main-content::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid #4a0000;
+    pointer-events: none;
+    z-index: 3; /* 確保邊框在內容之上 */
+}
+
+.intro-container {
+    position: relative;
+    z-index: 4; /* 確保在泡泡和主內容之上 */
+}
+
+.intro-container::after {
+    content: '_';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    color: #8B0000;
+    font-size: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(27, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(139, 0, 0, 0.3);
+    border-radius: 4px;
+    border: 1px solid #4a0000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 0, 0, 0.5);
+}
+
+.bubble {
+    position: absolute;
+    background: rgba(193, 17, 17, 0.1);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 50%;
+    animation: floatBubble 4s ease-in-out infinite;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.15);
+    pointer-events: none;
+}
+
+@keyframes floatBubble {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.8;
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-20vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* 添加全局泡泡容器樣式 */
+.global-bubble-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;  /* 確保在內容下方但在背景上方 */
+    overflow: hidden;
+}
+
+
+
+/*                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                            t__{r){1$                                                                           
+                                                                        r\{}}[-]}}[[][{1r                                                                       
+                                                                     ({}}{_?1z]][?]]?-+?_il                                                                     
+                                                                   zt)}_t[~}(ot_?}~_?]?-<""^,                                                                   
+                                                                  CXrj))}:_|+0ot<-~~+_-?-;::I+                                                                  
+                                                                 ZYzJY?}_+}(>_LaY]<l_l!i>_-]<>_                                                                 
+                                                                nCXJ0r_/?tx][!!]vQLr|[I<}{}}~i_+                                                                
+                                                               {UYYQ0f|nuU1}1{(/rCpqwpYj/\{??+-1l                                                               
+                                                               XUUU00f/vC->uzcXvztx)(ccucux\(]-{?                                                               
+                                                              {UJUUOmj/z|;I{nx\-(\\\)!}/t/{<+~??)v                                                              
+                                                              QCJJLYCf/CuYcncz1fnj}zcnXJQ0)<_]1{)/                                                              
+                                                              mQYJJYvf/x-0mpji~>}I;-mwm\}x?_[)\]?}                                                              
+                                                              m0zQJLLvx/<+[?l;::;,::>?+l~?{]{({-{-                                                              
+                                                              8LXQ0JuLcQ|l;;;;:;I:::,,:+xt({}1+[\                                                               
+                                                               J0JZQfjQUwr~,^^",:"^`^;}XUrft]+_1x                                                               
+                                                              zmO0LQJ]ucYbqLr-i;,I<)zOOYX(1t]}xu\_                                                              
+                                                             xJQQLC0Z){nnu0qwLUcuYCQqQLCx_\|uCCz\{nf                                                            
+                                                           LXJLCCUQQj)[f|}{n|jcXXn?<X(()tx\fLLQ0x]xu/                                                           
+                                                           XXJJJLCY)-1((|f<I!I~)}!^~r{<|n\[_nLQ0Zu?}]                                                           
+                                                          QYYXzxn|v?/jnjjtL|>:;l;l]uvw}"}|))j]!_fYf[f                                                           
+                                                          qCUCC}[nv/fjfj|tvzU{+l;[uCZft}?/cn)+".'" zYQ                                                          
+                                                           YJ|Jv-1czuvnx->!+00|]]\vqJ)|]|vvY};;,; [JX                                                           
+                                                            r{j0r{?X0CCz{/ctYZwnxYkZCwOzvUx(t\_>,:<O)<                                                          
+                                                           j]ttYQx\|fZn(:+ZLqZwdXwhpOQQ)jOf":>]>",lc++                                                          
+                                                          %1_}f(QJn(tur(__qmbZdZ|LmmZmY?_)xf!":<".-{</                                                          
+                                                          /[?]1}vvxYt(n/}+X0qZ0|>]XQ0U{,`;>],^"I"{{<{)+?                                                        
+                                                         j]--(t{nufYwCn/\:">_)1>[<l)<`'^^^,I`"Itf}+?\}>/                                                        
+                                                        u)-[)[//uXcxxQ0[{]`:;l--|(!l;;""I~~<l+/f[{]){1r|}]                                                      
+                                                       1\[??(|)\zXtfjzQr_u}]???]}(<_--+_}--{/x1{(?_-)f{_-j                                                      
+                                                     $})1}]}{((\Ju\}()|n)Xx(\t/)1r1{))(|{1tnO}??[-~[}]1})1$                                                     
+                                                    {??{[]-?]?-tYn\[?[|})YCjrff\tvft|\/tjxjzx?~>>_tx\nc[?[[z                                                    
+                                                   }-_?--?-_-]1uvn/{]?{\(UWkpZLCC0OOZmpa*aov_+_)rn/(ft1+~_+_)                                                   
+                                                 \}__------?}1jcxnt1[]?}\XB&&&M*aao#W&MMM#C[)nXv/]1(?-+~+++>+?                                                  
+                                                 z}_-{{]---?](vvxxj)[]??]u*hoakkakkbkokhawncvt(1}\r-~++++++~><_]                                                
+                                                Zcj}?fnj\))(/uXvxrr)[]]?-roaakbbokkkboaaoZr()){{fun(_~++++~~-][t                                                
+                                                dnrj{[fnnxxxxYJcxrt1]?][?fMMMMo#W*obmZphov{){?]f\nJf(-~~~~_}(\(f                                                
+                                                $nrxj({|fxxxXmm0Xjt({{{]1r**aobbqqdqZZmkh|)}_~_?+tL/[{-++?1|\\(f                                                
+                                                Jxxxj/1[})jn0mkwzXmqmOQ{}rbmOOZYtumZ0Omqp(}++]}1]rYj{__-}(||||(j                                                
+                                             Qunrff/\)}[[}fvCOvzcJpbqZu}}cwYJCJJQUJcUCLxQ|1(fUu]?fnnf)-](())))1)(/u                                             
+                                          vn wn/tfft/)}}{tcJwqQ/xcXQz|{)}YpCJLUJ0UJ/(cOJZ|\unv|~-|/ucv|-[{))|}??[{f  J                                          
+                                        *pYJd0CJcxcc/tttfzzXphCfLbpOLr})(0b00ZZZpOZ)}Zbqd)}{[+_1[1\vv z(tftt/nrvYcnqpUZk                                        
+                                        *kohq0kmmJQxtjftxzn|r(-}ObqwY({{1Zkqbdkkabd))bahd1???\1)jrxuf1 x/\|{?JOCOkwLb&oa                                        
+                                         MmCvLmunx\(ff/tvnu\}?_/cJJzf1{{)pophkaaokbQYkhhk\}{jvcjjvnv(?)$f/\||txfnJpn/wk                                         
+                                        pqXjLbcvccccCQ  uncf|{?)cuxur()|\pp0bpppkwwpOZwqpr[{1{(txcf)}}t   $Yvnnnr(nO\/OJ                                        
+                                      }+|(}](j\fjfjv0   xfrtt\)}ncuvx\)(jbOYpZQQmCCwLQ0mmz{1|)\fxc/1{)fJ   Zcnf){}[t()}]-_i                                     
+                                      ]<>+}1t}(|))|-   ujft\|((1|vunr/\(nomLkdqqbmmhqddkb0\(((\txv\{}}}x     Ur|{}{\j}[i~_-                                     
+                                        ~{-[-]]](/     Zcxf/()111tnxft/|YWkpohhhokb#bhhahd/(((\tjr\1{1/U$      n|+)_1~1!\                                       
+                                           v}f-+       bapmOCurft\jnrf/|0&kbohahokkMkahohh/)(fuYQwqmO0dd0       1~}}(                                           
+                                                       a8*boowwwpbqbhZ0LkMdqabdqkqqobdpkqmUppqkpqmodZCLq0b                                                      
+                                                          #OuzYJ00LZawZZZmm0dqmZqO0dwmZqOQZmQYJYYYYnjCLY                                                        
+                                                           [{frjruuuxxxxnuccnrYqdmznxxnuncQxfjjjftf]I                                                           
+                                                           ]!!__i?(trrjjrjjjjrv   njrrjrjnJxj\+illl"l                                                           
+                                                           r>::,,",I~[?>_[1|\|J   {?1|\]_-f}~l^^"",^i                                                           
+                                                            ~:;::,,"""""^^","l    _I:::"^^^^^^""",":_                                                           
+                                                            _;;:::,,,,"""""""!    z>::,,,"""""""","ln                                                           
+                                                            {!;:::,,,,,,,,,^:-     _:;:,,,,,,,,,,,">                                                            
+                                                             i:;::::,:::,:,^!      )i;;::;;::::::,:+                                                            
+                                                             -:;::::::::::"I}       +;IIIIII;::::,I$                                                            
+                                                             /!;;;:;;;;;;::>        />I!!!llI;;;;,l                                                             
+                                                              >:;;;;;;;;;,l          ?i><i!lI;;;;;<                                                             
+                                                              _;llII;;;;;l+           _>~i!lllllIl?                                                             
+                                                              ]I!llllIIl;<            (-+>i!!iiil!]                                                             
+                                                              (!ii>ii!ii!?            0{-+<>><+~!>}                                                             
+                                                              |~+-+~~++~<{            $)]]_+~+_-><|                                                             
+                                                             C}+]]???]]__{             (][[]?]?-<i?                                                             
+                                                             /+-][[}}{{_?\             t[}()))}_>i!!                                                            
+                                                            j}???]}{)|}?{              X(]|\(1{[~l:I[                                                           
+                                                           v{-]][[}{))})                X)}|)1)[!I;"Ib                                                          
+                                                          Q\-?]][[}{1{\                  Y)1){-l;::,">                                                          
+                                                          n[_?]?]]}11_?                  W\[iI::::,,^I                                                          
+                                                          j?_-?]][[_!,l                  $\-I:::::,,";r                                                         
+                                                          n?_-?][[?!,"l                  $|_l:::::::";c                                                         
+                                                          Y}+_-?[[?!:,!                  $(_l:::::::"l                                                          
+                                                           (++_?]]-!::<                   (+l;;;;;;:;<                                                          
+                                                           j]++_??_!,;)                   |+!IIIIII:!                                                           
+                                                           t)_++___i:!n                  n\?>llll!!i_                                                           
+                                                           [-]]??]]-<i_                  /}1]+>i!l;;:;                                                          
+                                                           {_++-?]?+!Ii$                 (-[?<:""^'.,$                                                          
+                                                            ]~+--]?+!"^~                 1_]_l"^^`'`+                                                           
+                                                           $-~+__?]?~;!Ii               [?]]?>;:Ii!I!                                                           
+                                                           $?~++_-??<:;;1               _>-???-_~>;:!                                                           
+                                                            (__+_-??iI>-?               <!~+<I"^"::~                                                            
+                                                            ))?_+___-?];`               _>~+i,''^,:?                                                            
+                                                             [-{}?__?_: `n             }})[-__<:`^i_                                                            
+                                                             ?+-[}[]]_>!_j             |~_-__~!^`l[?                                                            
+                                                             }_+__??]][--             \{[__I,:,,:l>!                                                            
+                                                             )??---???+l,{            j\[]?+I';~+i>                                                             
+                                                             )]__-__-_<>!?            1({}[?<I!!!~[                                                             
+                                                              1}{_})}_<<>[            X\]{tt|(]])(j                                                             
+                                                              }(fCqdwLOOcj            JnCkokXULu{{t                                                             
+                                                               obkkbOJwbwz            dpkoodUZbbjj                                                              
+                                                               adbah0UdkqU-           qqhaowZhapf/                                                              
+                                                              MkpkhhdmQ0dQx          QmdddbpZpamrc                                                              
+                                                              bO0mpbbqJnCCn$         ZOqqbbwCC0JxU                                                              
+                                                              b0JQZwppZ0Znc$         wCmmmmZ0LUnnQ                                                              
+                                                              $wQJQqbdp0nnQ$         wOCQZdbpOzz0O                                                              
+                                                                OL0daoohOZa           wpwwkkkbpb8                                                               
+                                                                  whaoakW              $**oooa$                                                                 
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
+                                                                                                                                                                
